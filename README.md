@@ -1,20 +1,18 @@
-# bunny 🤍
+# bunny
 
-A small, interactive digital love letter — built as a single-page web experience with cinematic transitions, ambient music, and little hidden surprises.
+An animated, interactive single-page web experience built with React, Vite, and Framer Motion — featuring cinematic transitions, a scroll-driven gallery, ambient audio reactivity, and a few hidden Easter eggs.
 
-> *"An ephemeral sanctuary crafted solely to reflect your luminosity."*
+## ✨ Features
 
-## ✨ What's inside
-
-- **Preloader → Envelope → Intro** — a layered opening sequence: a loading screen, a wax-sealed envelope you click to open, and a cinematic intro before the main experience reveals itself
-- **Hero section** — parallax background art with a personal title and dedication
-- **Gallery** — a scroll-driven masonry layout of images with subtle parallax depth
-- **Poetry section** — verses that reveal word-by-word as you scroll
-- **Dedicated Songs** — a curated mini music player per song, complete with lyric snippets and confetti bursts
-- **Love Letters** — scattered, hand-tilted notes floating across the screen
-- **Sticky Notes** — magnetic, draggable-feeling notes that react to your cursor
-- **Secret Letter** — a hidden Easter egg: type a certain word anywhere on the page to unlock a bonus letter
-- **Custom cursor, noise overlay, particle background, and audio reactivity** — ambient music subtly pulses the background visuals in sync
+- **Layered intro sequence** — preloader → clickable envelope → cinematic intro before the main page reveals itself
+- **Hero section** — parallax background art with `useScroll`-driven motion
+- **Gallery** — scroll-driven masonry layout with per-image parallax depth
+- **Poetry section** — text that reveals word-by-word as you scroll, synced to scroll progress
+- **Dedicated Songs** — a per-track mini music player with preview audio and confetti bursts on interaction
+- **Floating notes** — scattered, hand-tilted note components animated across the screen
+- **Magnetic sticky notes** — elements that subtly follow the cursor for a tactile feel
+- **Secret letter** — a hidden Easter egg unlocked by typing a specific keyword anywhere on the page
+- **Custom cursor, noise overlay, and particle background** — ambient visuals that pulse in sync with the currently playing audio (via the Web Audio API)
 - **Smooth scrolling** powered by [Lenis](https://github.com/darkroomengineering/lenis)
 
 ## 🛠️ Tech stack
@@ -55,11 +53,11 @@ The dev server will be available at the local URL printed in your terminal (typi
 ```
 bunny/
 ├── public/
-│   ├── assets/          # Background images (bunny, heart, peonies, etc.)
+│   ├── assets/          # Background images
 │   └── icons.svg
 ├── src/
-│   ├── assets/           # Local image assets
-│   ├── components/       # All UI sections & effects
+│   ├── assets/          # Local image assets
+│   ├── components/      # All UI sections & visual effects
 │   │   ├── Preloader.jsx
 │   │   ├── Envelope.jsx
 │   │   ├── IntroSequence.jsx
@@ -76,7 +74,7 @@ bunny/
 │   │   ├── NoiseOverlay.jsx
 │   │   └── MagneticElement.jsx
 │   ├── utils/
-│   │   └── UISounds.js   # Web Audio sound effects & frequency analysis
+│   │   └── UISounds.js  # Web Audio sound effects & frequency analysis
 │   ├── App.jsx
 │   └── main.jsx
 └── vite.config.js
@@ -84,19 +82,17 @@ bunny/
 
 ## 🎨 Customizing
 
-Most of the personal content lives directly in the components and is easy to swap out:
-
 | Want to change... | Edit this file |
 |---|---|
-| The dedication name / hero text | `src/components/Hero.jsx` |
+| Hero title/subtitle text | `src/components/Hero.jsx` |
 | Gallery images | `src/components/Gallery.jsx` |
-| Poetry verses | `src/components/PoetrySection.jsx` |
-| Songs & lyrics | `src/components/DedicatedSongs.jsx` |
-| Scattered love notes | `src/components/LoveLetters.jsx` |
+| Poetry text | `src/components/PoetrySection.jsx` |
+| Songs & lyric snippets | `src/components/DedicatedSongs.jsx` |
+| Floating notes | `src/components/LoveLetters.jsx` |
 | Sticky notes | `src/components/StickyNotes.jsx` |
-| Secret unlock word & message | `src/components/SecretLetter.jsx` |
+| Secret unlock keyword & message | `src/components/SecretLetter.jsx` |
 | Background music track | `src/components/AudioPlayer.jsx` |
 
 ## 📄 License
 
-No license specified yet — add one (e.g. MIT) if you plan to share or open-source this further.
+No license specified yet — add one (e.g. MIT) if you plan to open-source this further.
