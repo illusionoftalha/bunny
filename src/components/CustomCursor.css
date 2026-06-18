@@ -1,0 +1,50 @@
+.custom-cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  background-color: var(--color-persian-rose);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: multiply;
+}
+
+.custom-cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Liquid Aura Effects */
+  box-shadow: 0 0 20px 10px rgba(255, 115, 195, 0.4), inset 0 0 10px 5px rgba(255, 115, 195, 0.3);
+  filter: blur(2px);
+  background: rgba(255, 115, 195, 0.1);
+  border: none;
+}
+
+.cursor-text {
+  font-family: var(--font-sans);
+  font-size: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--color-deep-pink);
+  margin-left: 2px; /* optical alignment */
+  filter: blur(0px); /* keep text sharp */
+}
+
+body {
+  cursor: none;
+}
+
+a, button, .hover-target, .canvas-image-container {
+  cursor: none;
+}
