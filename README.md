@@ -95,4 +95,4 @@ bunny/
 
 ## 📄 License
 
-No license specified yet — add one (e.g. MIT) if you plan to open-source this further.
+This project is licensed under the [MIT License](./LICENSE) © 2026 Sheikh Muhammad Talha.
